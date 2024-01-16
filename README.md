@@ -12,11 +12,13 @@ Click on "Advanced" when you import the GitHub repo to flows.network to enter th
 | Name             | Value                                                                                       |
 | ---------------- | ------------------------------------------------------------------------------------------- |
 | collection_name | The collection name you used to store the embeddings, e.g., `my_kb` |
-| error_mesg | Sorry, an error has occurred or your question is not related to the Rust programming language. Please try again later. |
-| system_prompt | You are an expert in the Rust programming language. Please answer the question based on the context provided. CONTEXT:  |
+| system_prompt | Please answer the question based on the context provided. CONTEXT: |
+| post_prompt | Only answer questions in the context. Don't provide any information unrelated to the subject. |
+| error_mesg | Sorry, an error has occurred or your question is not related to the subject. Please try again later. |
+| no_answer_mesg | Sorry, I cannot answer questions that are not related to the subject. |
 | RUST_LOG | debug  |
 
-After a successful deployment, you will receive a webhook URL in the Webhook Endpoint section. Copy and paste this URL after 'https://flows-chat-ui.vercel.app/?chat_url=' in your browser's address bar. This will allow you to start a chat with your RAG chatbot.
+After a successful deployment, you will receive a webhook URL in the Webhook Endpoint section. Copy and paste this URL after `https://flows-chat-ui.vercel.app/?chat_url=` in your browser's address bar. This will allow you to start a chat with your RAG chatbot.
 
 ```
 https://flows-chat-ui.vercel.app/?chat_url=https://code.flows.network/webhook/a-z
